@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <h1>user</h1>
+    <div>
+      e-mail :   <span id="e-mail"></span>
+    </div>
+    <div>
+        age : <span id="age"></span>
+    </div>
+    <form id="idvoiture">
+        <label for="cars">Marque de voiture</label>
+        <select  id="idcars">
+            <option value="BMW">BMW</option>
+            <option value="Renault">Renault</option>
+            <option value="Opel">Opel</option>
+            <option value="Mercedes">Marcedes</option>
+            <option value="KIA">KIA</option>
+        </select> <br>
+        <label for="color">Couleur de votre voiture</label>
+        <select  id="idcolor">
+            <option value="Noir">Noir</option>
+            <option value="Rouge">Rouge</option>
+            <option value="Bleu">Bleu</option>
+            <option value="Blanc">Blanc</option>
+        </select> <br>
+        <button type="submit" onclick="submit_car()">Submit</button>
+    </form>
+    <ul id="myUL">
+  
+    </ul>
+  
+
+    <script>
+    // let fName = document.querySelector ("#firstName")
+    // let lName = document.querySelector ("#lastName")
+
+    let title = document.querySelector ("h1")
+    let email = document.querySelector ("#e-mail")
+    let age = document.querySelector ("#age")
+    let store = JSON.parse(localStorage.getItem("con_user"));
+
+        console.log(store);
+        title.innerText =  store.firstName + " " +store.lastName ;
+        email.innerText = store.email ;
+        age.innerText =  store.age ;
+
+    
+function submit_car() { 
+    
+
+var id_user = JSON.parse(localStorage.getItem("con_user")).id
+console.log(id_user);
+
+    var car = document.querySelector("#idcars").value;
+  var color = document.querySelector("#idcolor").value;
+  var id1 = Math.floor((Math.random() * 1000));
+  var loc = JSON.parse(localStorage.getItem("car")) || [];  
+  
+
+  var object = {
+      car: car,
+      color: color,
+      id_owner : id_user  ,
+      idcar : id1 ,
+  }
+   loc.push(object);
+//    console.log(loc);
+   localStorage.setItem("car",JSON.stringify(loc))
+}
+
+let gen_car = (car) => {
+            let html = `
+                        <li>
+                        <div>
+                            you have a 
+                            <span id="col${car.idcar}">${car.color}</span>
+                            <span id="car">${car.car}</span>
+                        </div>
+                        </li>
+                        `;
+            myUL.innerHTML += html;
+        };
+        let myUL = document.querySelector("#myUL");
+      
+        let store_car = JSON.parse(localStorage.getItem("car"));
+        console.log(store_car);
+        
+        
+        for (let i = 0; i < store_car.length; i++) {
+            if (store_car[i].id_owner == store.id) {
+            
+                gen_car(store_car[i]);
+            };
+        };
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

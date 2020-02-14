@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='modal.css'>
+</head>
+<body>
+
+
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id02" class="modal">
+  <div class="modal-content animate"  method="post" onSubmit = "return validate(this)">
+   
+   <!-- why action ="afficher.html" doesn't work-->
+    <div class="container">
+      <label ><b>Username</b></label>
+      <input type="text" id="coemail" placeholder="Enter Username" required>
+
+      <label ><b>Password</b></label>
+      <input type="password" id="copw" placeholder="Enter Password" required>
+        
+      <button onclick="validate()" href="http://127.0.0.1:5500/afficher.html" >Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </div>
+</div>
+  
+    
+
+
+
+    <script src='modal.js'></script>
+</body>
+</html>

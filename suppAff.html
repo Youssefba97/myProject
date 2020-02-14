@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <ul class="newUL">
+
+    </ul>
+    <script>
+        let newUL = document.querySelector('.newUL')
+            let generateUser = (user) => {
+                        let html = `
+                                    <li>
+                                        <span >${user.id}</span>
+                                        <span id="car">${user.firstName}, ${user.lastName}</span>
+                                        <button class="delete">delete</button>
+                                        <button class="open">open</button>
+                                    </li>
+                                    `;
+                        newUL.innerHTML += html;
+                    };
+            let storedUsers = JSON.parse(localStorage.getItem("user"));
+            let storedCars = JSON.parse(localStorage.getItem("car"));
+        console.log(storedCars);
+        console.log(storedUsers);
+        for (let i = 0; i < storedUsers.length; i++) {
+            generateUser (storedUsers[i])            
+        }
+
+        
+        
+        
+
+    </script>
+</body>
+</html>

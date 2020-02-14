@@ -1,0 +1,31 @@
+
+.my_container {
+    border: 1px solid rgb(9, 0, 128); /* le bord deborde en bas du tableau !!*/
+}
+.my_row {
+border: 1px solid grey;
+height: 300px;
+}
+.my_col {
+border: 1px dotted black;
+}
+.my_row2 {
+    border: 1px solid grey;
+    height: 75px;
+}
+.my_row1 {
+    border: 1px solid grey;
+    height: 150px;
+}
+.my_row3 {
+    border: 1px solid grey;
+    height: 250px;
+}
+.my_row4 {
+    border: 1px solid grey;
+    height: 50px;
+}
+.my_row5 {
+    border: 1px solid grey;
+    height: 200px;
+}

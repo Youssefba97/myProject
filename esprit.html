@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='atelier1.js'>
+       
+        // function display() {  
+        //     if(document.getElementById('gaf').checked) { 
+        //        alert ('Bonne route ! '); 
+        //     } 
+            // else if(document.getElementById('HTML').checked) { 
+            //     document.getElementById("disp").innerHTML 
+            //         = document.getElementById("HTML").value 
+            //         + " radio button checked";   
+            // } 
+            // else if(document.getElementById('JS').checked) { 
+            //     document.getElementById("disp").innerHTML 
+            //         = document.getElementById("JS").value 
+            //         + " radio button checked";   
+            // } 
+            // else { 
+            //     document.getElementById("disp").innerHTML 
+            //         = "No one selected"; 
+            // } 
+        
+    </script>
+</head>
+<body>
+    <p ><h3 style="color: red;">Quelle est votre destination ?</h3></p>
+    <input type="radio" name="destination" value="gafsa" id="gaf"> gafsa<br>
+    <input type="radio" name="destination" value="jendouba"id="jan"> jendouba<br>
+    <input type="radio" name="destination" value="gabes" id="gab"> gabes <br>
+    <button type="button" onclick="displayRadioValue()">  valider  </button>
+
+<!------------------exercice 4------------------------------------------------->
+<hr>
+<hr>
+<h3>Quels sont les nombres premiers parmi ceux la :</h3>
+<div>
+  <input type="checkbox" id="nbr" name="nbr"  value='751'>
+  <label name="myNbr" value='751'>751</label>
+</div>
+
+<div>
+    <input type="checkbox" id="nbr" name="nbr" value='209*'>
+    <label name="myNbr" value='209*'>209*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="nbr" name="nbr" value='223'>
+    <label for="nbr">223</label>
+  </div>
+  <div>
+    <input type="checkbox" id="nbr" name="nbr" value='517*'>
+    <label for="nbr">517*</label>
+  </div>
+  <div>
+    <input type="checkbox" id="nbr" name="nbr" value='647'>
+    <label for="nbr">647</label>
+  </div>
+
+  <button type="button" onclick="verifyStar()">  Verify  </button>
+  
+  
+  <hr>
+  <hr>
+  <br>
+  <h3>Entrez du texte:</h3>
+  <input type="text" id="myText">
+  <br>
+  <h4>Entrez un nombre:</h4>
+  <input type="text" id="myNumber">
+  <button type="button" onclick="chercher()">  Chercher  </button>
+
+  <hr>
+  <hr>
+  <br>
+   <h2>Testez vos connaissances sur JS</h2>
+   <p>1 - Qu'est ce qui determine le debut et la fin d'une balise HTML :</p><br>
+        <input type="radio" value="faux" name="1" class="ex8"> ? et !<br>
+        <input type="radio" value="faux"name="1" class="ex8"> # et #<br>
+        <input type="radio" value="vrai" name="1" class= "ex8"> "<" et ">" <br>
+<br>
+<button type="button" onclick="verifier()">  test  </button>
+
+
+</body>
+</html>

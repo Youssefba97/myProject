@@ -1,0 +1,98 @@
+/*  .btn {
+	color: white ;
+	text-decoration: none ;
+	background-color: rgb(228, 27, 27);
+    padding: 10px;
+    display: inline-block;
+    list-style: none ;
+}
+.btn:hover{
+    text-decoration: red;
+    background-color: white ;
+  
+	transition: 0.5s all; 
+}
+.font{
+    font-family: lato;
+    text-decoration: none ;
+    color: white;
+
+} */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    background-color: rgb(156, 154, 154);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    color : rgb(156, 154, 154);
+    background-color: white ;
+	transition: 0.5s all;   }
+  #logo {
+    width:100px ;
+    height: 100px;
+  }
+  
+.active {
+    display: block;
+    color: white;
+    background-color: rgb(107, 105, 105);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(156, 154, 154);
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+
+
+.fieldhead {
+    border: none;
+    position: absolute;
+    left: 110px;top: 80px;
+}
+.column {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 100px; /* Should be removed. Only for demonstration */
+  }
+  .column1 {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: 25px;
+  }
+body {
+    margin-top: 50px;
+    margin-left: 50px;
+}
