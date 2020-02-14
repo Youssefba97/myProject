@@ -14,7 +14,7 @@ function facto() {
     if (n>4) {
         text.innerText = "erreur"
     }
-    console.log(n);
+    
     
     var f = 0;
   console.log (f);
