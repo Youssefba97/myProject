@@ -17,6 +17,7 @@ function facto() {
     console.log(n);
     
     var f = 0;
+  console.log (f);
     for (let i = 1; i < n + 1; i++) {
       //console.log(i);
     
